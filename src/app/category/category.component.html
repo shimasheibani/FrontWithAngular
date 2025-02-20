@@ -1,0 +1,24 @@
+<div class="category-page">
+    <div *ngIf="message" class="message"> 
+        {{message}}
+    </div>
+    <div class="category-header">
+        <h1>Category</h1>
+        <div class="add-cat">
+            <input type="text" [(ngModel)]="categoryName" placeholder="Category Name">
+            <button *ngIf="!isEditing" (click) = "addCategory()"> Add Category</button>
+            <button *ngIf="isEditing" (click)= "editCategory()"> Edit Category</button>
+        </div>
+    </div>
+
+    <ul *ngIf="categories.length > 0 " class="category-list">
+        <li *ngFor="let category of categories" class="category-item"> 
+            <span>{{category.name}}</span>
+            <div class="category-action">
+                <button (click)="handleDeletingCategory(category.id)">Delete</button>
+                <button (click)="handleEdirCategory(category)">Edit</button>
+            </div>
+        </li>
+
+    </ul>
+</div>
