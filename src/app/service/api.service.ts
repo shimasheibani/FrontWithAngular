@@ -179,7 +179,7 @@ export class ApiService {
   }
   
   updateTransaction(id: string, status: string):Observable<any>{
-    return this.http.put(`${ApiService.BASE_URL}/transactions/${id}`,JSON.stringify(status),{
+    return this.http.put(`${ApiService.BASE_URL}/transactions/update/${id}`,JSON.stringify(status),{
       headers: this.getHeader().set("Content-Type", "application/json")
     });
   }

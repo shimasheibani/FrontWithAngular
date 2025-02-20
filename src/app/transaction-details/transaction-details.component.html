@@ -6,7 +6,7 @@
         <div class="section-card">
            <h2>Transaction Information</h2>
            <p>Type: {{transaction.transactionType}}</p>
-           <p>Status: {{transaction.status}}</p>
+           <p>Status: {{transaction.transactionStatus}}</p>
            <p>Description: {{transaction.description}}</p>
            <p>Total Products: {{transaction.totalProducts}}</p>
            <p>Total Price: {{transaction.totalPrice | currency}}</p>
@@ -54,8 +54,8 @@
            <select [(ngModel)]="status" id="">
                <option value="PENDING">PENDING</option>
                <option value="PROCESSING">PROCESSING</option>
-               <option value="COMPLETED">COMPLETED</option>
-               <option value="CANCELED">CANCELED</option>
+               <option value="COMPLETE">COMPLETED</option>
+               <option value="CANCELLED">CANCELED</option>
            </select>
            <button (click)="handleUpdateTransaction()">Update Staus</button>
         </div>

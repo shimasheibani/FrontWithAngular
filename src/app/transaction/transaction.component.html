@@ -31,10 +31,10 @@
         <tbody>
           <tr *ngFor="let transaction of transactions">
             <td>{{ transaction.transactionType }}</td>
-            <td>{{ transaction.status }}</td>
+            <td>{{ transaction.transactionStatus }}</td>
             <td>{{ transaction.totalPrice }}</td>
             <td>{{ transaction.totalProducts }}</td>
-            <td>{{ transaction.createdAt | date : "short" }}</td>
+            <td>{{ transaction.createAt | date : "short" }}</td>
             <td (click)="navigateToTransactionDetails(transaction.id)">
               <button>View Details</button>
             </td>

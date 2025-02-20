@@ -33,8 +33,7 @@ export const routes: Routes = [
 {path:"sell", component: SellComponent, canActivate:[GuardService]}, 
 
 {path:"transaction", component:TransactionComponent , canActivate:[GuardService]}, 
-{path:"transaction-details/:id", component: TransactionDetailsComponent, canActivate:[GuardService], data: { RenderMode: 'no-prerendering' }}, 
-{path:"transaction-details/:id", component: TransactionDetailsComponent, canActivate: [GuardService], data: { RenderMode: 'no-prerendering' } },
+{path:"transaction-details/:transactionId", component: TransactionDetailsComponent, canActivate:[GuardService], data: { RenderMode: 'no-prerendering' }}, 
 
 
 {path:"profile", component: ProfileComponent, canActivate:[GuardService]}, 

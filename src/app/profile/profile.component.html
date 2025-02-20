@@ -1,1 +1,26 @@
-<p>profile works!</p>
+<div class="profile-page">
+    <p *ngIf="message" class="message">{{message}}</p>
+    <div **ngIf="user" class="profile-card">
+        <h1>Hello, {{user.name}}</h1>
+        <div class="profile-info">
+            <label for="">Name</label>
+            <span>{{user.name}}</span>
+        </div>
+
+        <div class="profile-info">
+            <label for="">Email</label>
+            <span>{{user.email}}</span>
+        </div>
+
+        <div class="profile-info">
+            <label for="">PhoneNumber</label>
+            <span>{{user.phoneNumber}}</span>
+        </div>
+
+        <div class="profile-info">
+            <label for="">Role</label>
+            <span>{{user.role}}</span>
+        </div>
+
+    </div>
+</div>
