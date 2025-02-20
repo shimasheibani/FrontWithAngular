@@ -17,10 +17,8 @@ export class ProfileComponent implements OnInit{
   }
   fetchUserInfo():void{
     this.apiService.getLoggedInUserInfo().subscribe({
-      next:(response:any)=>{
-        if(response.status===200){
-          this.user=response.user;
-        }
+      next:(response)=>{
+          this.user=response;
       },
       error:(error:any)=>
         this.showMessage(error?.error?.message||error?.message||"Unable to get User Details")
